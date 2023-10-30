@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Rolls Information</title>
+</head>
+<body>
+<h1>Rolls Information</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Price</th>
+  </tr>
+  <!-- Placeholder for roll data -->
+  th:each="roll : ${rolls}"
+  <tr th:each="roll : ${rolls}">
+    <td th:text="${roll.name}"></td>
+    <td th:text="${roll.description}"></td>
+    <td th:text="${roll.price}"></td>
+  </tr>
+</table>
+</body>
+</html>

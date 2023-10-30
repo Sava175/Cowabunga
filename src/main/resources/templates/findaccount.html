@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Find Account</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f2f2f2;
+    }
+    .container {
+      margin-top: 50px;
+    }
+    .card {
+      border: none;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .card-header {
+      background-color: #f2f2f2;
+      border-bottom: none;
+    }
+    .card-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #444;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      font-weight: bold;
+      color: #444;
+    }
+    .form-control {
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      border-bottom: 1px solid #ccc;
+    }
+    .form-control:focus {
+      box-shadow: none;
+      border-bottom: 2px solid #999;
+    }
+    .btn-primary {
+      background-color: #337ab7;
+      border-color: #337ab7;
+      font-weight: bold;
+    }
+    .btn-primary:hover, .btn-primary:focus {
+      background-color: #23527c;
+      border-color: #23527c;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="card mx-auto" style="max-width: 400px;">
+    <div class="card-header">
+      <h2 class="card-title">Find Account</h2>
+    </div>
+    <div class="card-body">
+      <form th:action="@{/findaccount/submit}" method="post">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>
